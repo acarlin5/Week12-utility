@@ -18,3 +18,15 @@ def UpdateString(string1, string2, index):
 def FindWordCount(mylist, string):
     num = mylist.count(string)
     return num
+
+def ScoreFinder(players, scores, name):
+    players_lower = [x.lower() for x in players]
+    
+    if name in players:
+        index = players.index(name)
+        print('OUTPUT', name, 'got a score of', scores[index])
+    elif name in players_lower:
+        index = players_lower.index(name)
+        print('OUTPUT', name, 'got a score of', scores[index])
+    else:
+        print('OUTPUT player not found')
