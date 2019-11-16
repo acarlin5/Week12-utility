@@ -8,9 +8,13 @@ def PrintOutput(string):
 
 def LoadFile(file):
     with open(file, 'r') as myfile:
-        lines = myfile.readlines()
-        print("OUTPUT", lines)
+        lines = myfile.read().splitlines()
+        return lines
 
 def UpdateString(string1, string2, index):
     new = string1[:index] + string2 + string1[index +1:]
     print('OUTPUT', new)
+
+def FindWordCount(mylist, string):
+    num = mylist.count(string)
+    return num
