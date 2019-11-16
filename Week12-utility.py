@@ -34,3 +34,11 @@ def ScoreFinder(players, scores, name):
 def Union(list1, list2):
     union = list1 + list2
     return union
+
+def Intersection(list1, list2):
+    intersection = []
+    for s in list1:
+        if s in list2:
+            intersection.append(s)
+    return intersection
+        
